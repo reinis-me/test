@@ -1,58 +1,8 @@
-/* Here are example using scss */
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=latin-ext');
 
-html {
-  box-sizing: border-box;
-  font-size: 62.5%;
-}
+@import "~bootstrap/scss/bootstrap";
+@import "~flatpickr/dist/flatpickr.min.css";
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #282c34;
-  color: #fff;
-  font-size: 1.6rem;
-  text-align: center;
-
-  & > * {
-    margin: 2rem 0;
-  }
-}
-
-.header {
-  h1 {
-    font-size: 3.5rem;
-  }
-}
-
-.example {
-  display: flex;
-  justify-content: center;
-
-  &-style,
-  &-lazy-load {
-    margin: 3rem 2rem;
-  }
-}
-
-.from-scss {
-  color: #0096FF;
-}
-
-.link {
-  color: #61dafb;
-  font-size: 2rem;
-  margin-top: 3rem;
-}
-
-#lazy-load {
-  padding: 1rem 1.5rem;
-  border: 0;
-  border-radius: 10rem;
-  outline: none;
-}
+@import "./general/layout";
+@import "./components/cards";
+@import "./components/filter";

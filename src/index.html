@@ -1,36 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <title>Webpack 4 Boilerplate</title>
-  </head>
-  <body>
-    <header class="header">
-      <h1>Webpack 4 Boilerplate</h1>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <section class="example">
-      <div class="example-style">
-        <p class="from-css">Hi, I'm from CSS</p>
-        <p class="from-sass">Hi, I'm from SASS</p>
-        <p class="from-scss">Hi, I'm from SCSS</p>
+  <title>Cube events</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+
+      <div class="col-sm-6 col-lg-3 order-sm-2">
+        <div class="filter-box">
+          <form>
+            <div class="form-group">
+              <input type="text" class="form-control filter-input filter-search" id="searchTerm"
+                placeholder="Meklēt notikumu">
+            </div>
+
+            <div class="form-group">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="all" id="selectAll" checked>
+                <label class="form-check-label" for="selectAll">
+                  Visas tēmas
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input form-check-category" type="checkbox" value="ģimenēm" id="eventType2"
+                  checked>
+                <label class="form-check-label" for="eventType2">
+                  Ģimenēm
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input form-check-category" type="checkbox" value="izglītība" id="eventType3"
+                  checked>
+                <label class="form-check-label" for="eventType3">
+                  Izglītība
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input form-check-category" type="checkbox" value="kultūra" id="eventType4"
+                  checked>
+                <label class="form-check-label" for="eventType4">
+                  Kultūra
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input form-check-category" type="checkbox" value="sports" id="eventType5"
+                  checked>
+                <label class="form-check-label" for="eventType5">
+                  Sports
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input form-check-category" type="checkbox" value="cits" id="eventType6"
+                  checked>
+                <label class="form-check-label" for="eventType6">
+                  Cita tēma
+                </label>
+              </div>
+            </div>
+
+            <input type="text" class="form-control filter-input filter-date" id="searchRange"
+              placeholder="Atlasīt laika periodu">
+
+          </form>
+        </div>
       </div>
-      <div class="example-lazy-load">
-        <button id="lazy-load">Lazy load example</button>
-        <p>Hint: See Devtools network tabs and console tabs</p>
-      </div>
-    </section>
 
-    <a 
-      href="https://github.com/finmavis/webpack-4-boilerplate" 
-      target="_blank" 
-      rel="noopener noreferrer"
-      class="link"
-    >
-      Documentation
-    </a>
-  </body>
+      <div class="col-sm-6 col-lg-9  order-sm-1">
+        <div id="eventResults" class="row results">
+        </div>
+        <div class="loading">
+          <div class="loadingio-spinner-spinner-ysowses0zp">
+            <div class="ldio-et44prpvz4c">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center">
+          <button class="btn btn-primary" type="button" id="loadMore">Ielādēt vēl</button>
+        </div>
+      </div>
+
+
+
+      <script id="eventTemplate" type="text/x-handlebars-template">
+        <div class="col-xs-12 col-md-6 col-lg-4">
+          <div class="inner event-item">
+            <div class="event-item__date">
+              {{ date }}
+            </div>
+              {{#if image}}
+              <div class="event-item__image" style="background-image: url({{image}});"></div>
+                {{else}}
+                <div class="event-item__image"></div>
+              {{/if}}
+            <div class="event-item__type">
+              {{ type }}
+            </div>
+            <div class="event-item__title">
+              {{ title }}
+            </div>
+          </div>
+        </div>
+      </script>
+
+
+
+      <div id="noResults" class="no-results-template">
+        <div class="no-results-meessage">
+          Nekas netika atrasts. Lūdzu, izvēlies citus meklēšanas kritērijus!
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+
+</body>
+
 </html>

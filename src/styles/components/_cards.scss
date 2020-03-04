@@ -1,0 +1,52 @@
+.no-results-meessage {
+    text-align: center;
+    color: #cccccc;
+    font-size: 1.2rem;
+    display: block;
+    width: 100%;
+    padding: 30px;
+}
+
+.event-item {
+    &__date {
+        margin-bottom: 2px;
+        color: #ababab;
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    &__image {
+        margin-bottom: 6px;
+        padding-bottom: 50%;
+        background-size: cover;
+        background-position: center;
+        background-image: url("../assets/images/event-placeholder.png");
+        background-repeat: no-repeat;
+        background-color: #f0f0f0;
+    }
+
+    &__type {
+        color: #d9b800;
+        text-transform: uppercase;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        margin-bottom: 6px;
+       
+        &:after {
+            content: "";
+            display: block;
+            height: 2px;
+            background: #d9b800;
+            flex-grow: 1;
+            margin-left: 6px;
+        }
+    }
+    &__title {
+      color: #454545;
+      font-weight: 500;
+      &::first-letter {
+        text-transform: uppercase;
+    }
+    }
+}

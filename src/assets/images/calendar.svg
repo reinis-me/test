@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="36px" height="36px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="calendar" transform="translate(8.000000, 8.000000)" fill="#51CF27" fill-rule="nonzero">
+            <rect id="Rectangle" x="5" y="9" width="2" height="2"></rect>
+            <rect id="Rectangle" x="9" y="9" width="2" height="2"></rect>
+            <rect id="Rectangle" x="13" y="9" width="2" height="2"></rect>
+            <rect id="Rectangle" x="5" y="13" width="2" height="2"></rect>
+            <rect id="Rectangle" x="9" y="13" width="2" height="2"></rect>
+            <rect id="Rectangle" x="13" y="13" width="2" height="2"></rect>
+            <path d="M19,2 L17,2 L17,1 C17,0.4 16.6,0 16,0 C15.4,0 15,0.4 15,1 L15,2 L5,2 L5,1 C5,0.4 4.6,0 4,0 C3.4,0 3,0.4 3,1 L3,2 L1,2 C0.4,2 0,2.4 0,3 L0,19 C0,19.6 0.4,20 1,20 L19,20 C19.5,20 20,19.6 20,19 L20,3 C20,2.4 19.5,2 19,2 Z M18,18 L2,18 L2,6 L18,6 L18,18 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>
