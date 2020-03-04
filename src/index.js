@@ -2,8 +2,8 @@ import $ from 'jquery';
 import { loadEvents } from './scripts/mongo';
 import flatpickr from "flatpickr";
 import { Latvian } from "flatpickr/dist/l10n/lv.js"
-const Handlebars = require("handlebars");
 import "mark.js/dist/jquery.mark.es6";
+const Handlebars = require("handlebars");
 const moment = require('moment');
 
 moment.locale('lv');
@@ -28,7 +28,6 @@ async function showEvents() {
 
 
     if ($("#searchRange").val().length > 3) {
-
         let date = $("#searchRange").val().split(" līdz ");
         params.match.true_date = { $gt: new Date(date[0]), $lt: new Date(date[1]) };
     }
@@ -51,12 +50,12 @@ async function showEvents() {
 
     loadEvents(params).then((results) => {
 
-        console.log(results);
-
         if (results.length > 0) {
             $(results).each(function (key, event) {
 
-                console.log(event);
+                if(event.lead_image) {
+                    event.lead_image = event.lead_image.replace("http://", "//");
+                }
 
                 let context = {
                     title: event.title,
